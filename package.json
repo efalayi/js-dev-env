@@ -6,11 +6,16 @@
   "repository": "git@github.com:efalayi/js-dev-env.git",
   "author": "Esther Falayi <esther.falayi@andela.com>",
   "license": "MIT",
+  "scripts": {
+    "prestart": "babel-node scripts/startMessage.js",
+    "start": "babel-node scripts/srcServer.js"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
     "babel-jest": "^23.6.0",
-    "babel-loader": "^8.0.4",
     "chalk": "^2.4.1",
     "cross-env": "^5.2.0",
     "eslint": "^5.9.0",
@@ -22,9 +27,5 @@
   },
   "dependencies": {
     "express": "^4.16.4"
-  },
-  "scripts": {
-    "prestart": "node scripts/startMessage.js",
-    "start": "node scripts/srcServer.js"
   }
 }
