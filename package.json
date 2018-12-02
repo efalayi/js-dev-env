@@ -7,8 +7,8 @@
   "author": "Esther Falayi <esther.falayi@andela.com>",
   "license": "MIT",
   "scripts": {
-    "prestart": "babel-node scripts/startMessage.js",
-    "start": "babel-node scripts/srcServer.js"
+    "prestart": "babel-node server/startMessage.js",
+    "start": "babel-node server/srcServer.js"
   },
   "lint-staged": {
     "*.{js,jsx}": [

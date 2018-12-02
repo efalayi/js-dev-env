@@ -1,14 +1,14 @@
 const babelConfig = {
   presets: [
     [
-      "@babel/preset-env",
+      '@babel/preset-env',
       {
-        "targets": {
-          "node": true
-        }
-      }
-    ]
-  ]
+        targets: {
+          node: true,
+        },
+      },
+    ],
+  ],
 }
 
 console.log('loaded babel config file.')

@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+// /* eslint-disable no-console */
 import express from 'express'
 import path from 'path'
 import open from 'open'
@@ -17,7 +17,7 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.get('/', (req, res) => {
   console.log('app running on port: ', PORT)
-  res.sendFile(path.join(__dirname, '../src/index.html'))
+  res.sendFile(path.join(__dirname, '../client/index.html'))
 })
 
 app.listen(PORT, (error) => {

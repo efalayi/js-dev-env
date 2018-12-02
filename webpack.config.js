@@ -12,7 +12,7 @@ export default [
     devtool,
     entry: [
       '@babel/polyfill',
-      './scripts/srcServer.js'
+      './server/srcServer.js',
     ],
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -21,8 +21,8 @@ export default [
     target: 'node',
     externals: [nodeExternals()],
     module: {
-      rules: module.getTargetModuleRules('node')
-    }
+      rules: module.getTargetModuleRules('node'),
+    },
   },
   {
     mode,
@@ -30,7 +30,7 @@ export default [
     devtool,
     entry: [
       '@babel/polyfill',
-      './src/index.js'
+      './client/index.js',
     ],
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -38,8 +38,7 @@ export default [
     },
     target: 'web',
     module: {
-      rules: module.getTargetModuleRules('web')
-    }
-  }
+      rules: module.getTargetModuleRules('web'),
+    },
+  },
 ]
-
