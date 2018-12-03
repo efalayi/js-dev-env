@@ -9,7 +9,8 @@
   "scripts": {
     "prestart": "babel-node server/startMessage.js",
     "start": "babel-node server/srcServer.js",
-    "test": "jest --config jest.config.js --watch"
+    "test": "jest --config jest.config.js",
+    "dev-test": "jest --config jest.config.js --watch"
   },
   "lint-staged": {
     "*.{js,jsx}": [

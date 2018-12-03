@@ -10,7 +10,7 @@ describe('#basic test', () => {
     const indexHTML = fs.readFileSync('./client/index.html', 'utf-8')
     const { window } = new JSDOM(indexHTML)
     const [headingTag] = window.document.getElementsByTagName('h2')
-    expect(headingTag.innerHTML).toEqual('A JavaScript Development Environment!')
+    expect(headingTag.innerHTML).toEqual('A JavaScript Development Environment')
     window.close()
   })
 })
