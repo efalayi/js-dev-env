@@ -1,0 +1,15 @@
+# Appveyor configuration file
+#
+# Check https://ci.appveyor.com/ for more details
+#
+environment:
+  matrix:
+    - nodejs_version: "8"
+  install:
+    - ps: Install-Product node $env:nodejs_version
+  testscript:
+    - node --version
+    - npm --version
+    - yarn test
+
+  build: off
