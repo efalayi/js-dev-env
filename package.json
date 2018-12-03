@@ -7,8 +7,10 @@
   "author": "Esther Falayi <esther.falayi@andela.com>",
   "license": "MIT",
   "scripts": {
-    "prestart": "babel-node scripts/startMessage.js",
-    "start": "babel-node scripts/srcServer.js"
+    "prestart": "babel-node server/startMessage.js",
+    "start": "babel-node server/srcServer.js",
+    "test": "jest --config jest.config.js",
+    "dev-test": "jest --config jest.config.js --watch"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -22,6 +24,7 @@
     "@babel/node": "^7.0.0",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
@@ -36,10 +39,12 @@
     "husky": "^1.2.0",
     "image-webpack-loader": "^4.5.0",
     "jest": "^23.6.0",
+    "jsdom": "^13.0.0",
     "lint-staged": "^8.1.0",
     "node-sass": "^4.10.0",
     "npm-run-all": "^4.1.5",
     "open": "^0.0.5",
+    "regenerator-runtime": "^0.13.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.26.1",
