@@ -1,8 +1,7 @@
 const babelConfig = {
   presets: [
     [
-      '@babel/preset-env',
-      {
+      '@babel/preset-env', {
         targets: {
           node: true,
         },
@@ -11,5 +10,4 @@ const babelConfig = {
   ],
 }
 
-console.log('loaded babel config file.')
 module.exports = babelConfig
