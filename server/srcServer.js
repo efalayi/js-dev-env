@@ -1,10 +1,10 @@
-// /* eslint-disable no-console */
+/* eslint-disable no-console */
 import express from 'express'
-import path from 'path'
 import open from 'open'
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import config from '../webpack.config'
+import appRouter from './routes'
 
 const PORT = 3000
 const app = express()
@@ -15,15 +15,13 @@ app.use(webpackDevMiddleware(compiler, {
   writeToDisk: true,
 }))
 
-app.get('/', (req, res) => {
-  console.log('app running on port: ', PORT)
-  res.sendFile(path.join(__dirname, '../client/index.html'))
-})
+app.use('/', appRouter)
 
 app.listen(PORT, (error) => {
   if (error) {
     console.log(error);
   } else {
+    console.log('App is running on port: ', PORT)
     open(`http://localhost:${PORT}`)
   }
 })
