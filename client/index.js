@@ -17,8 +17,10 @@ const updateUsersTableBody = (users) => {
   usersTableBody.innerHTML = usersTableCellData.join('')
 }
 
-getRequest('/api/v1/users').then((response) => {
-  updateUsersTableBody(response)
-}).catch((error) => {
-  console.log('error occured: ', error)
-})
+window.onload = () => {
+  getRequest('/api/v1/users').then((response) => {
+    updateUsersTableBody(response)
+  }).catch((error) => {
+    console.log('error occured: ', error)
+  })
+}
