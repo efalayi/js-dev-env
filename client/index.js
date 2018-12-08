@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import '@babel/polyfill'
 import { getRequest } from './api/request'
 import './scss/index.scss'
 

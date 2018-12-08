@@ -16,3 +16,7 @@ A development environment for JavaScript
 
 ###### Transpiling
 - Babel
+
+###### Scripts
+npm run start:dev - start app with devServer
+npm start - start app with srcServer
