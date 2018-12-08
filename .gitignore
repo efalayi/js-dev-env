@@ -60,3 +60,6 @@ typings/
 
 # next.js build output
 .next
+
+# Generated files
+server/routes/mocks/data/db.json

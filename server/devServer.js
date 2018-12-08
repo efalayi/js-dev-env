@@ -1,6 +1,9 @@
 /* eslint-disable no-console */
 import express from 'express'
+import compression from 'compression'
+import cors from 'cors'
 import open from 'open'
+import path from 'path'
 import chalk from 'chalk'
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
@@ -19,6 +22,9 @@ const PORT = 3000
 const app = express()
 const compiler = webpack(config)
 
+app.use(express.static(path.resolve(__dirname, '../dist')))
+app.use(compression())
+app.use(cors())
 app.use(webpackDevMiddleware(compiler, {
   publicPath: '/',
   writeToDisk: true,

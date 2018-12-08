@@ -1,3 +1,4 @@
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 const defaultModuleRules = [
   {
@@ -16,7 +17,7 @@ const webModuleRules = [
   {
     test: /\.s?css$/,
     use: [
-      'style-loader',
+      MiniCssExtractPlugin.loader,
       'css-loader',
       'sass-loader',
     ],
