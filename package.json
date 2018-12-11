@@ -11,7 +11,8 @@
     "start": "babel-node server/srcServer.js",
     "start:dev": "babel-node server/devServer.js",
     "test": "jest --config jest.config.js",
-    "dev-test": "jest --config jest.config.js --watch"
+    "client:test": "jest --config jest.config.js --watch",
+    "server:test": "./node_modules/.bin/mocha --opts ./mocha.opts"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -29,6 +30,8 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "chalk": "^2.4.1",
     "chance": "^1.0.18",
     "cross-env": "^5.2.0",
@@ -46,12 +49,14 @@
     "jsdom": "^13.0.0",
     "lint-staged": "^8.1.0",
     "mini-css-extract-plugin": "^0.5.0",
+    "mocha": "^5.2.0",
     "node-sass": "^4.10.0",
     "npm-run-all": "^4.1.5",
     "open": "^0.0.5",
     "regenerator-runtime": "^0.13.1",
     "rosie": "^2.0.1",
     "sass-loader": "^7.1.0",
+    "sinon": "^7.1.1",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "1.3.0",
     "webpack": "^4.26.1",

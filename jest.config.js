@@ -9,6 +9,7 @@ const jestConfig = {
   moduleNameMapper: {
     '\\.(css|scss|less)$': '<rootDir>/config/jest/styleMock.js',
   },
+  roots: ['<rootDir>/client/'],
   testEnvironment: 'node',
   transform: {
     '^.+\\.jsx?$': '<rootDir>/config/jest/jest.transformer.js',

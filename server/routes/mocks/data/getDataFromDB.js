@@ -6,7 +6,8 @@ const getDataFromDB = async dataName => new Promise((resolve, reject) => {
       reject(error)
     }
     const database = JSON.parse(data)
-    resolve(database[dataName])
+    const fetchedData = database[dataName] || []
+    resolve(fetchedData)
   })
 })
 
